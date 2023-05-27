@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+option go_package = "github.com/9rib/golang-test-task/rpc";
+
+service Solution {
+  rpc MineBlock (MineBlockRequest) returns (MineBlockResponse) {}
+  rpc CountCycles (CountCyclesRequest) returns (CountCyclesResponse) {}
+}
+
+message MineBlockRequest {
+  repeated Transaction txs = 1;
+}
+
+message Transaction {
+  repeated Vertex inputs = 1;
+  repeated Vertex outputs = 2;
+}
+
+message Vertex {
+  string txHash = 1;
+  int64 index = 2;
+  string address = 3;
+}
+
+message MineBlockResponse {
+
+}
+
+message CountCyclesRequest {
+  int64 fromBlock = 1;
+  int64 toBlock = 2;
+  int64 maxCycleLength = 3;
+}
+
+message CountCyclesResponse {
+  int64 nCycles = 1;
+}

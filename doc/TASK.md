@@ -1,6 +1,6 @@
 # The Task
 
-![example](resources/task-example.png)
+![example](../resources/task-example.png)
 
 ## Description
 
@@ -20,7 +20,7 @@ We will take as an example the input data as pictured in the figure above.
 
 ```
 CountCycles(0, 0, 1) -> 0
-   Graph is empth - 0 cycles.
+   Graph is empty - 0 cycles.
 
 MineBlock(transactions_from_block_0) -> -1
 CountCycles(0, 0, 1) -> 0
@@ -64,3 +64,7 @@ CountCycles(0, 2, 1) -> 6
         
 CountCycles(1, 2, 1) -> 3
 ```
+
+## The Solution
+
+Write your solution in `./solution.go`, Good Luck!
